@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin:0px 10px;
+  background-repeat: repeat;
+}
+
+.grid {
+	border: 0px solid;
+  max-width: 900px;
+  margin-top:0px; 	
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.card {
+  position: relative;
+  -webkit-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  margin:4px;
+}
+
+.card,
+.back,
+.front {
+  height: 140px;
+  width: 140px;
+}
+
+.back,
+.front {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.front {
+  background:#A7A7A7 url('../img/quest.png') no-repeat center center / contain;
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.selected {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.match .front {
+	background: transparent; 
+}
+
+.inputfield {
+	color:white;
+	background-color: grey;
+	width:280px;
+	height:60px;
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	font-size:20px;
+	margin-left:10px;
+	font-weight: bold;
+}
+
+.btn {
+	color:cornflowerblue;
+	/*background:linear-gradient(to left, #e91e23,black);*/
+	font-family:Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif';
+	font-size: 24px;
+	font-weight: bold;
+	margin-top:50px;
+	margin-left:100px;
+	height:40px;
+}
+.btn:hover{
+	cursor:pointer;
+	color:darkgray;
+	font-size:26px;
+}
+
+.background {
+	background: url("../img/1.png");
+	height: 200px;
+	background-repeat: no-repeat;
+}
+#myProgress {
+  width: 90%;
+  background-color: grey;
+  margin-left: 10px;	
+}
+
+#myBar {
+  height:45px;
+  width: 0%;
+  background-color: #4CAF50;
+  text-align: center; /* To center it horizontally (if you want) */
+  line-height: 40px; /* To center it vertically */
+  color: white;
+	
+}
